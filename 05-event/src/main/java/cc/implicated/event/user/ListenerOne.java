@@ -1,5 +1,6 @@
 package cc.implicated.event.user;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
@@ -12,12 +13,14 @@ import org.springframework.stereotype.Component;
  * @version 1.0
  * @since 3/11/22 15:41
  */
+@Slf4j
 @Component
-public class UserListener {
+public class ListenerOne {
     
     @EventListener
     public void notify(UserEvent userEvent) {
         User user = userEvent.getUser();
-        System.out.println(user);
+        log.info("zylog#notify ==> one threadId:{{}}", Thread.currentThread().getId());
+        System.out.println(getClass().getSimpleName());
     }
 }

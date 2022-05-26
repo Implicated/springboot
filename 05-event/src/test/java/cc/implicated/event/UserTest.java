@@ -16,12 +16,12 @@ import javax.annotation.Resource;
  * @version 1.0
  * @since 3/11/22 15:54
  */
-@SpringBootTest()
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, classes = Event.class)
 public class UserTest {
     @Resource
     private UserService userService;
     
-    @Test
+    @Test()
     public void register() {
         User z3 = User.builder().name("z3").age(17).build();
         userService.register(z3);
