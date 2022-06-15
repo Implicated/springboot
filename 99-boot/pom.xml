@@ -6,26 +6,34 @@
         <groupId>cc.implicated</groupId>
         <artifactId>parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>event</artifactId>
+    <artifactId>boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>05-event</name>
-    <description>05-event</description>
+    <name>99-boot</name>
+    <description>99-boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>cc.implicated</groupId>
+            <artifactId>start</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

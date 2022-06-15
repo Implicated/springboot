@@ -10,8 +10,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>cc.implicated</groupId>
-    <artifactId>00-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>00-parent</name>
     <packaging>pom</packaging>
 
     <properties>
@@ -22,6 +23,13 @@
     </properties>
 
     <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cc.implicated</groupId>
+                <artifactId>start</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
     <dependencies>
