@@ -60,7 +60,10 @@ public class LogAspect {
         // return "before";
     }
     
-    // @After("annotationPointcut()")
+    /**
+     * 返回值没有意义（不确定）
+     */
+    @After("annotationPointcut()")
     public String after() {
         System.out.println("after start");
         return "after";
