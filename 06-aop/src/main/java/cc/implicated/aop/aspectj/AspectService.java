@@ -15,8 +15,8 @@ import org.springframework.stereotype.Service;
 public class AspectService {
     
     @Log
-    public String before() {
-        return null;
+    public int before() {
+        return 1;
     }
     
     @Log
@@ -25,7 +25,7 @@ public class AspectService {
     }
     
     @Log
-    public String around() {
-        return null;
+    public int around() {
+        return 1;
     }
 }

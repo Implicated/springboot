@@ -17,6 +17,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class LogAspect {
     
+    /**
+     * <a href="https://zhuanlan.zhihu.com/p/63001123">spring aop中pointcut表达式完整版</a>
+     */
+    @Pointcut("within(cc.implicated.aop.aspectj..*)")
+    public void withinPointcut() {
+    }
+    
+    @Pointcut("@within(cc.implicated.aop.aspectj.Log)")
+    public void atWithinPointcut() {
+    }
+    
     @Pointcut("@annotation(cc.implicated.aop.aspectj.Log)")
     public void annotationPointcut() {
     }
@@ -41,23 +52,24 @@ public class LogAspect {
     @Before("annotationPointcut()")
     public String before() {
         System.out.println("before start");
-        System.out.println("before end");
-        return "around";
+        return "before";
     }
     
-    @After("annotationPointcut()")
+    // @After("annotationPointcut()")
     public String after() {
         System.out.println("after start");
-        System.out.println("after end");
-        return "around";
+        return "after";
     }
     
+    /**
+     * 返回原方法的值
+     */
     @Around("annotationPointcut()")
-    public String around(ProceedingJoinPoint pjp) throws Throwable {
+    public Object around(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("around start");
-        pjp.proceed();
+        Object proceed = pjp.proceed();
         System.out.println("around end");
-        return "around";
+        return proceed;
     }
     
 }

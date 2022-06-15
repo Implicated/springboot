@@ -22,7 +22,7 @@ public class AspectController {
     private AspectService aspectService;
     
     @GetMapping("/before")
-    public String before() {
+    public int before() {
         return aspectService.before();
     }
     
@@ -32,7 +32,7 @@ public class AspectController {
     }
     
     @GetMapping("/around")
-    public String around() {
+    public int around() {
         return aspectService.around();
     }
 }
