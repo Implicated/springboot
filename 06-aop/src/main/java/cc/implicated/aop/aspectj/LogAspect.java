@@ -48,11 +48,16 @@ public class LogAspect {
     public void executionPointcut() {
     }
     
+    /**
+     * 通过throw exception 阻断原方法
+     * 返回值没有意义（不确定）
+     */
     // @Before("execution(public * cc.implicated.learnjava.service.UserService.*(..))")
     @Before("annotationPointcut()")
-    public String before() {
+    public String before() throws Exception{
         System.out.println("before start");
-        return "before";
+        throw new RuntimeException();
+        // return "before";
     }
     
     // @After("annotationPointcut()")
