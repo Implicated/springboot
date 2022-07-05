@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: test
+
+app:
+  port: 2222
+  name: world
+  info: message
+  address:
+    - jing
+    - jin
+    - ji
+  user: /verify_id_name_phone
