@@ -13,6 +13,7 @@
     <artifactId>parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>00-parent</name>
+    <description>00-parent</description>
     <packaging>pom</packaging>
 
     <properties>

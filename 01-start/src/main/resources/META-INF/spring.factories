@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cc.implicated.start.config.DemoAutoConfiguration
+  cc.implicated.start.config.OneAutoConfiguration,\
+  cc.implicated.start.config.TwoAutoConfiguration
