@@ -16,13 +16,13 @@ import java.util.Map;
  */
 @NoArgsConstructor
 public class DemoFactory {
-    
+
     private static final Map<Integer, DemoService> map = new LinkedHashMap<>();
-    
+
     public static DemoService getInstance(Integer code) {
         return map.get(code);
     }
-    
+
     public static void registerInstance(Integer code, DemoService s) {
         map.put(code, s);
     }

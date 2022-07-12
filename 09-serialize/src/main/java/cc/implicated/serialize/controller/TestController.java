@@ -21,19 +21,19 @@ import java.math.BigDecimal;
 @RestController
 @RequestMapping("/")
 public class TestController {
-    
+
     @GetMapping("/s")
     public SerializeDemoVO serialize() {
         SerializeDemoVO vo = new SerializeDemoVO();
         vo.setId(1).setGender("1").setSex("1");
         return vo;
     }
-    
+
     @GetMapping("/j")
     public JacksonDemoVO jackson() {
         return new JacksonDemoVO();
     }
-    
+
     @GetMapping("/b")
     public BigDecimalDemoVO bigDecimal() {
         BigDecimal bd = new BigDecimal("0.1521");

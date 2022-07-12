@@ -29,9 +29,9 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SerializerBigDecimal extends JsonSerializer<BigDecimal> implements ContextualSerializer {
-    
+
     protected DecimalFormat decimalFormat;
-    
+
     @Override
     public void serialize(BigDecimal value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
         if (Objects.isNull(value)) {
@@ -44,23 +44,23 @@ public class SerializerBigDecimal extends JsonSerializer<BigDecimal> implements 
             }
         }
     }
-    
+
     @Override
     public JsonSerializer<?> createContextual(SerializerProvider prov, BeanProperty property) throws JsonMappingException {
         JsonFormat.Value format = findFormatOverrides(prov, property, handledType());
         if (format == null) {
             return this;
         }
-        
+
         if (format.hasPattern()) {
             DecimalFormat decimalFormat = new DecimalFormat(format.getPattern());
             decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
             return new SerializerBigDecimal(decimalFormat);
         }
-        
+
         return this;
     }
-    
+
     protected JsonFormat.Value findFormatOverrides(SerializerProvider provider, BeanProperty prop, Class<?> typeForDefaults) {
         if (prop != null) {
             return prop.findPropertyFormat(provider.getConfig(), typeForDefaults);

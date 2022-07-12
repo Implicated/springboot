@@ -20,7 +20,7 @@ import javax.annotation.Resource;
 public class UserTest {
     @Resource
     private UserService userService;
-    
+
     @Test()
     public void register() {
         User z3 = User.builder().name("z3").age(17).build();
@@ -28,7 +28,7 @@ public class UserTest {
         User l4 = User.builder().name("l4").age(17).build();
         userService.register(l4);
     }
-    
+
     @Test
     public void assertTest() {
         User u = new User();

@@ -10,6 +10,6 @@ package cc.implicated.start;
  * @since 6/15/22 16:22
  */
 public interface TwoService {
-    
+
     String getMessage();
 }

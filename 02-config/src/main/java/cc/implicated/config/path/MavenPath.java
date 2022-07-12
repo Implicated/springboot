@@ -24,12 +24,12 @@ public class MavenPath {
     @SneakyThrows
     public static void main(String[] args) {
         getPath();
-        
+
         getFileVSgetPath();
-        
+
         readFile();
     }
-    
+
     private static void readFile() {
         try (InputStream inputStream = MavenPath.class.getResourceAsStream("/config/11.md")) {
             Assert.notNull(inputStream, "input stream is null!");
@@ -47,31 +47,31 @@ public class MavenPath {
             e.printStackTrace();
         }
     }
-    
+
     @SneakyThrows
     private static void getPath() {
         System.out.println("getResource");
         System.out.println(MavenPath.class.getResource(""));
         System.out.println(MavenPath.class.getClassLoader().getResource(""));
         System.out.println(MavenPath.class.getResource("/"));
-        
+
         System.out.println("getPath");
         System.out.println(MavenPath.class.getResource("").getPath());
         System.out.println(MavenPath.class.getClassLoader().getResource("").getPath());
         System.out.println(MavenPath.class.getResource("/").getPath());
-        
+
         System.out.println("getFile");
         System.out.println(MavenPath.class.getResource("").getFile());
         System.out.println(MavenPath.class.getClassLoader().getResource("").getFile());
         System.out.println(MavenPath.class.getResource("/").getFile());
         System.out.println();
     }
-    
+
     private static void getFileVSgetPath() throws MalformedURLException {
         URL url = new URL("https://www.baidu.com/img/baidu_jgylogo3.gif?param=1111&param2=aaaaa");
         System.out.println(url.getFile());
         System.out.println(url.getPath());
         System.out.println();
     }
-    
+
 }

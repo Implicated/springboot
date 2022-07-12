@@ -33,27 +33,27 @@ import java.util.Date;
 // @JsonIgnoreProperties("avgScore")
 // @JsonIncludeProperties("avgScore")
 public class JacksonDemoVO {
-    
+
     // 为空不展示
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer id;
-    
+
     // lombok getter不兼，手动写getter
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String sId;
-    
+
     // public String getsId() {
     //     return sId;
     // }
-    
+
     // lombok getter不兼，手动写getter
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dId;
-    
+
     // 跳过序列化和反序列化
     @JsonIgnore
     private Integer ignore;
-    
+
     // 改名
     @JsonProperty("property")
     private Integer hello;

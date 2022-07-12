@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class OneAutoConfiguration {
-    
+
     @Bean
     @ConditionalOnMissingBean(OneService.class)
     @ConditionalOnProperty(prefix = "ark.external", value = "one", havingValue = "enable")

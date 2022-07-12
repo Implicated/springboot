@@ -20,17 +20,17 @@ import javax.annotation.Resource;
 public class AspectController {
     @Resource
     private AspectService aspectService;
-    
+
     @GetMapping("/before")
     public int before() {
         return aspectService.before();
     }
-    
+
     @GetMapping("/after")
     public String after() {
         return aspectService.after();
     }
-    
+
     @GetMapping("/around")
     public int around() {
         return aspectService.around();

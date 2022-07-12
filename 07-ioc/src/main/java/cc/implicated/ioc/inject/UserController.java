@@ -20,12 +20,12 @@ import javax.annotation.Resource;
 public class UserController {
     @Resource
     private UserService user;
-    
+
     @GetMapping("/resource")
     public void resource() {
         user.resource();
     }
-    
+
     @GetMapping("/autowired")
     public void autowired() {
         user.autowired();

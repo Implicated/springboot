@@ -17,7 +17,7 @@ import org.springframework.context.ApplicationEvent;
 @Setter
 public class UserEvent extends ApplicationEvent {
     private User user;
-    
+
     public UserEvent(User user) {
         super(user);
         this.user = user;

@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class ListenerOne {
-    
+
     @EventListener
     public void notify(UserEvent userEvent) {
         User user = userEvent.getUser();

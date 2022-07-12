@@ -14,14 +14,14 @@ import java.util.List;
  * @since 5/23/22 20:18
  */
 public interface CacheService {
-    
+
     User select(Integer id);
-    
+
     void insert(User user);
-    
+
     void update(User user);
-    
+
     void delete(Integer id);
-    
+
     List<User> all();
 }

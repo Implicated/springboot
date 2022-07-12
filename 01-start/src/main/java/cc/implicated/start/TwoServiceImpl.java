@@ -12,11 +12,11 @@ import org.springframework.beans.factory.InitializingBean;
  * @since 6/15/22 16:22
  */
 public class TwoServiceImpl implements TwoService, InitializingBean {
-    
+
     public String getMessage() {
         return "hello two";
     }
-    
+
     @Override
     public void afterPropertiesSet() {
         System.out.println("after two");

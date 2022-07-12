@@ -16,22 +16,22 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LogAspect {
-    
+
     /**
      * <a href="https://zhuanlan.zhihu.com/p/63001123">spring aop中pointcut表达式完整版</a>
      */
     @Pointcut("within(cc.implicated.aop.aspectj..*)")
     public void withinPointcut() {
     }
-    
+
     @Pointcut("@within(cc.implicated.aop.aspectj.Log)")
     public void atWithinPointcut() {
     }
-    
+
     @Pointcut("@annotation(cc.implicated.aop.aspectj.Log)")
     public void annotationPointcut() {
     }
-    
+
     /**
      * execution(modifiers-pattern? ret-type-pattern declaring-type-pattern? name-pattern(param-pattern)throws-pattern?)
      * <ul>
@@ -47,19 +47,19 @@ public class LogAspect {
     @Pointcut("execution(public * cc.implicated.aop.aspectj.AspectService.*(..))")
     public void executionPointcut() {
     }
-    
+
     /**
      * 通过throw exception 阻断原方法
      * 返回值没有意义（不确定）
      */
     // @Before("execution(public * cc.implicated.learnjava.service.UserService.*(..))")
     @Before("annotationPointcut()")
-    public String before() throws Exception{
+    public String before() throws Exception {
         System.out.println("before start");
         throw new RuntimeException();
         // return "before";
     }
-    
+
     /**
      * 返回值没有意义（不确定）
      */
@@ -68,7 +68,7 @@ public class LogAspect {
         System.out.println("after start");
         return "after";
     }
-    
+
     /**
      * 返回原方法的值
      */
@@ -79,5 +79,5 @@ public class LogAspect {
         System.out.println("around end");
         return proceed;
     }
-    
+
 }

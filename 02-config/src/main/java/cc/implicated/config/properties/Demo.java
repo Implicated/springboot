@@ -20,11 +20,11 @@ import javax.annotation.Resource;
 public class Demo implements InitializingBean {
     @Resource
     private AppProperties appProperties;
-    
+
     public void getProperties() {
         System.out.println(appProperties);
     }
-    
+
     @Override
     public void afterPropertiesSet() {
         getProperties();

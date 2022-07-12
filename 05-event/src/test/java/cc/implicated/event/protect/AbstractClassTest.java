@@ -15,12 +15,12 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest(classes = Event.class)
 public class AbstractClassTest {
-   
-   @Test
-   public void check() {
-       System.out.println(ClassFactory.get(1).setParam(1, 1, 1));
-       System.out.println(ClassFactory.get(1).setParam(2, 1, 1));
-       System.out.println(ClassFactory.get(1).hashCode());
-       System.out.println(ClassFactory.get(1).hashCode());
-   }
+
+    @Test
+    public void check() {
+        System.out.println(ClassFactory.get(1).setParam(1, 1, 1));
+        System.out.println(ClassFactory.get(1).setParam(2, 1, 1));
+        System.out.println(ClassFactory.get(1).hashCode());
+        System.out.println(ClassFactory.get(1).hashCode());
+    }
 }

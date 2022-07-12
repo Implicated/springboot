@@ -23,12 +23,12 @@ public class CacheController {
     private Integer id = 1;
     @Resource
     private CacheService cacheService;
-    
+
     @GetMapping("/get")
     public User select() {
         return cacheService.select(1);
     }
-    
+
     @GetMapping("/upd")
     public User update() {
         User user = select();
@@ -36,21 +36,21 @@ public class CacheController {
         cacheService.update(user);
         return user;
     }
-    
+
     @GetMapping("/ins")
     public User insert() {
         User u = User.getOne(id++, 1);
         cacheService.insert(u);
         return u;
     }
-    
+
     @GetMapping("/del")
     public User delete() {
         User u = cacheService.select(1);
         cacheService.delete(u.getId());
         return u;
     }
-    
+
     @GetMapping("/all")
     public List<User> all() {
         return cacheService.all();

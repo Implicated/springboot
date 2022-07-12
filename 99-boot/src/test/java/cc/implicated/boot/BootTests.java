@@ -13,10 +13,10 @@ import javax.annotation.Resource;
 class BootTests {
     @Resource
     private TwoService twoService;
-    
+
     @Test
     void contextLoads() {
         System.out.println(twoService.getMessage());
     }
-    
+
 }

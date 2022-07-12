@@ -33,7 +33,7 @@ public class SerializerGenderAnnotation extends JsonSerializer<String> implement
             gen.writeString("woman");
         }
     }
-    
+
     @Override
     public JsonSerializer<?> createContextual(SerializerProvider prov, BeanProperty property) throws JsonMappingException {
         log.info(property.getName());

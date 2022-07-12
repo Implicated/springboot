@@ -25,31 +25,31 @@ import java.util.Map;
 @Service
 public class CacheServiceImpl implements CacheService {
     private final Map<Integer, User> map = new HashMap<>();
-    
+
     @Override
     @Cacheable(key = "#id")
     public User select(Integer id) {
         return map.get(id);
     }
-    
+
     @Override
     @CachePut(key = "#user.id")
     public void insert(User user) {
         map.put(user.getId(), user);
     }
-    
+
     @Override
     @Cacheable(key = "'hello:'" + "+ #user.id + '_' + #user.age")
     public void update(User user) {
         map.put(user.getId(), user);
     }
-    
+
     @Override
     @CacheEvict(key = "#p0")
     public void delete(Integer id) {
         map.remove(id);
     }
-    
+
     @Override
     public List<User> all() {
         return new ArrayList<>(map.values());

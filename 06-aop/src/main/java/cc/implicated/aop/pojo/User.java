@@ -25,11 +25,11 @@ import java.util.List;
 public class User implements Serializable {
     private Integer id;
     private Integer age;
-    
+
     public static User getOne(Integer id, Integer age) {
         return User.builder().id(id).age(age).build();
     }
-    
+
     public static List<User> getList() {
         List<User> list = new ArrayList<>();
         list.add(getOne(1, 10));

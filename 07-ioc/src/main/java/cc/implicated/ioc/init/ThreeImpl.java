@@ -18,7 +18,7 @@ public class ThreeImpl implements DemoService, InitializingBean {
     public String getName() {
         return getClass().getSimpleName();
     }
-    
+
     @Override
     public void afterPropertiesSet() throws Exception {
         DemoFactory.registerInstance(2, this);

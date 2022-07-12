@@ -16,7 +16,7 @@ public class AutowiredInject {
     public AutowiredInject() {
         System.out.println(getClass().getSimpleName() + "constructor process 1");
     }
-    
+
     public String getClassName() {
         return getClass().getSimpleName() + "autowired";
     }

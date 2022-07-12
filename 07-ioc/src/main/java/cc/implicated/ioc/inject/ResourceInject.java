@@ -16,7 +16,7 @@ public class ResourceInject {
     public ResourceInject() {
         System.out.println(getClass().getSimpleName() + "constructor process 1");
     }
-    
+
     public String getClassName() {
         return getClass().getSimpleName() + "resource";
     }

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Scope;
  * @since 5/26/22 23:00
  */
 public class config {
-    
+
     @Bean
     @Scope(value = "prototype")
     public ClassOne classOne() {

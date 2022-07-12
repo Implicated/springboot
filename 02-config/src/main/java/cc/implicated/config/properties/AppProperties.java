@@ -30,7 +30,8 @@ public class AppProperties {
     private Integer port;
     private String name;
     private String msg;
-    @NotEmpty private String info;
+    @NotEmpty
+    private String info;
     private List<String> address;
     private User user;
 }

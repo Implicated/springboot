@@ -8,8 +8,8 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class Aop {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Aop.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Aop.class, args);
+    }
 
 }

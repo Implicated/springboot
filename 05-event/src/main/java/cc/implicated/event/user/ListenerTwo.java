@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class ListenerTwo {
-    
+
     @EventListener
     public void notify(UserEvent userEvent) {
         log.info("zylog#notify ==> two threadId:{{}}", Thread.currentThread().getId());

@@ -15,9 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class Serialize {
-    
+
     public static void main(String[] args) {
         SpringApplication.run(Serialize.class, args);
     }
-    
+
 }

@@ -14,11 +14,11 @@ import java.util.Map;
  */
 public class ClassFactory {
     private static final Map<Integer, AbstractClass> MAP = new LinkedHashMap<>();
-    
+
     public static AbstractClass get(Integer key) {
         return MAP.get(key);
     }
-    
+
     public static void put(Integer key, AbstractClass clazz) {
         MAP.put(key, clazz);
     }

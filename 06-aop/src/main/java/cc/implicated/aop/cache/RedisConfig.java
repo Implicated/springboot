@@ -23,7 +23,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
  */
 @Configuration
 public class RedisConfig extends CachingConfigurerSupport {
-    
+
     // 自定义缓存key生成策略
     @Bean
     public KeyGenerator keyGenerator() {
@@ -47,7 +47,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     //     cacheManager.set
     //     return cacheManager;
     // }
-    
+
     @Bean
     public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
         StringRedisTemplate template = new StringRedisTemplate(factory);
@@ -55,7 +55,7 @@ public class RedisConfig extends CachingConfigurerSupport {
         template.afterPropertiesSet();
         return template;
     }
-    
+
     private void setSerializer(StringRedisTemplate template) {
         @SuppressWarnings({"rawtypes", "unchecked"})
         Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);

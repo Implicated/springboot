@@ -21,14 +21,14 @@ import lombok.experimental.Accessors;
 // @JsonIgnoreProperties("avgScore")
 // @JsonIncludeProperties("avgScore")
 public class SerializeDemoVO {
-    
+
     // 相同范型才能使用，不同类型会报转换异常
     // @JsonSerialize(using = SerializerGender.class)
     private Integer id;
-    
+
     @JsonSerialize(using = SerializerGender.class)
     private String gender;
-    
+
     @Gender
     private String sex;
 }

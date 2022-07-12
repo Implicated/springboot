@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/")
 public class App {
-    
+
     @GetMapping
     public String test() {
         return DemoFactory.getInstance(2).getName();
     }
-    
+
 }

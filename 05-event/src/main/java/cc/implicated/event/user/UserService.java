@@ -17,7 +17,7 @@ import static cc.implicated.event.Event.AC;
 @Slf4j
 @Service
 public class UserService {
-    
+
     public void register(User user) {
         log.info("zylog#register ==> register:{{}} threadId:{{}}", user, Thread.currentThread().getId());
         AC.publishEvent(new UserEvent(user));

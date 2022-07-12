@@ -13,17 +13,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AspectService {
-    
+
     @Log
     public int before() {
         return 1;
     }
-    
+
     @Log
     public String after() {
         return null;
     }
-    
+
     @Log
     public int around() {
         return 1;

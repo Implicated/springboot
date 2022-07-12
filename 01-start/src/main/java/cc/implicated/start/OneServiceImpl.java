@@ -12,11 +12,11 @@ import org.springframework.beans.factory.InitializingBean;
  * @since 6/15/22 16:22
  */
 public class OneServiceImpl implements OneService, InitializingBean {
-    
+
     public String getMessage() {
         return "hello one";
     }
-    
+
     @Override
     public void afterPropertiesSet() {
         System.out.println("after one");

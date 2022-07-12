@@ -10,9 +10,9 @@ import javax.annotation.Resource;
 class IocTests {
     @Resource
     private DemoFactory factory;
-    
+
     @Test
     void contextLoads() {
     }
-    
+
 }
